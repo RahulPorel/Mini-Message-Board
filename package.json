@@ -2,8 +2,16 @@
   "name": "my-ejs-project",
   "version": "0.0.0",
   "private": true,
+  "description": "An Express project using EJS as the templating engine.",
+  "author": "Rahul Porel",
+  "license": "MIT",
   "scripts": {
+    "start": "node ./bin/www",
     "dev": "nodemon ./bin/www"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,5 +20,14 @@
     "express": "^4.19.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RahulPorel/Mini-Message-Board"
+  },
+  "keywords": [
+    "Express",
+    "EJS",
+    "Node.js"
+  ]
 }
