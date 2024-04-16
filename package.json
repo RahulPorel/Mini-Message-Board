@@ -1,5 +1,5 @@
 {
-  "name": "my-ejs-project",
+  "name": "mini-msg-board",
   "version": "0.0.0",
   "private": true,
   "description": "An Express project using EJS as the templating engine.",
