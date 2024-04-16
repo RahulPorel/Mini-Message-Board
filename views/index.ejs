@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Recent messages</p>
+    <ul>
+      <% messages.forEach(function(message) { %>
+      <li>
+        <strong><%= message.user %>: </strong>
+        <%= message.text %> - <%= message.added %>
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/message">Add New Message</a>
+  </body>
+</html>
