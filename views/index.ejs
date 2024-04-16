@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Recent messages</p>
-    <ul>
+    <h1 class="main-header"><%= title %></h1>
+    <a href="/message"
+      ><button class="add-message-button">Add message</button></a
+    >
+    <p class="welcome-text">Recent messages</p>
+    <ul class="message-list">
       <% messages.forEach(function(message) { %>
-      <li>
-        <strong><%= message.user %>: </strong>
-        <%= message.text %> - <%= message.added %>
-      </li>
+      <div class="message-container">
+        <div class="user-heading-text">
+          <p class="message-user"><strong><%= message.user %></strong></p>
+          <span>del</span>
+          <p class="message-timestamp"><em>(<%= message.added %>)</em></p>
+        </div>
+        <p class="message-text"><%= message.text %></p>
+      </div>
+
       <% }); %>
     </ul>
-    <a href="/message">Add New Message</a>
   </body>
 </html>

@@ -20,13 +20,11 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/message", (req, res, next) => {
-  res.render("form", { title: "Send Message" });
+  res.render("form", { title: "Send a Message: " });
 });
 
 router.post("/message", (req, res, next) => {
   const { author, message } = req.body;
-  console.log("Author:", author);
-  console.log("Message:", message);
   messages.push({ text: message, user: author, added: new Date() });
   res.redirect("/");
 });

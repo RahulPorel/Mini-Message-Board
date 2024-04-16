@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%=title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <a href="/">Go Back </a>
-    <h3><%= title %></h3>
-
-    <form action="/new" method="post">
-      <label for="author">Name</label>
-      <input type="text" id="author" name="author" /> <br />
+    <a href="/">Take me Back </a>
+    <h1 class="send-message-header"><%= title %></h1>
+    <form action="/message" method="post" class="send-message-form">
+      <label for="author">Username</label>
+      <input type="text" id="author" name="author" required /> <br />
       <br />
-
-      <label for="message">Comments</label>
-      <input type="text" id="message" name="message" /> <br />
+      <label for="message">Message</label>
+      <input type="text" id="message" name="message" required /> <br />
       <br />
-
-      <input type="submit" value="Post" />
+      <button id="submit-button">Send</button>
     </form>
   </body>
 </html>
